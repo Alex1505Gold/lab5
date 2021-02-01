@@ -61,10 +61,11 @@ int main()
     std::for_each(v0.cbegin(), v0.cend(), printV);
     std::cout << std::endl;
     //Первый способ создать set
-    std::set<int> st0(v0.begin(), v0.end());
+    std::set<int, std::greater<int>> st0(v0.begin(), v0.end());
 
     std::for_each(st0.cbegin(), st0.cend(), printV);
     std::cout << std::endl;
+
     //Второй способ создать set
     std::set <int> st1;
     std::copy(v0.begin(), v0.end(), std::inserter(st1, st1.end()));
